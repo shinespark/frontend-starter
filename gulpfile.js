@@ -1,5 +1,6 @@
+'use strict';
+
 var gulp = require('gulp');
-var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var bs = require('browser-sync').create();
@@ -13,12 +14,10 @@ gulp.task('bs', function(){
 });
 
 
-// SCSS with scss-lint
-gulp.task('scss-with-scss-lint', function(){
+// SCSS
+gulp.task('sass', function(){
   return gulp.src('./src/sass/**/*.scss')
-    .pipe(plumber())
-    .pipe(scsslint())
-    .pipe(sass())
+    .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -30,13 +29,16 @@ gulp.task('scss-lint', function(){
 });
 
 
+// SCSS with scss-lint
+gulp.task('sass-with-scss-lint', ['scss-lint', 'sass']);
+
+
 // scss-watch
-gulp.task('scss-watch', ['sass'], function(){
-  var watcher = gulp.watch('./src/sass/**/*.scss', ['scss-with-scss-lint']);
+gulp.task('scss:watch', function(){
+  var watcher = gulp.watch('./src/sass/**/*.scss', ['sass-with-scss-lint']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
 });
 
-gulp.task('default', ['bs', 'scss-watch']);
-
+gulp.task('default', ['bs', 'scss:watch']);
