@@ -8,7 +8,7 @@ var bs = require('browser-sync').create();
 gulp.task('bs', function(){
   var bsOptions = {};
   bsOptions.files = ['template/**/*.html', 'css/**/*.css'];
-  bsOptions.port  = 3000;
+  bsOptions.port  = 3001;
   bs.init(bsOptions);
 });
 
@@ -17,7 +17,7 @@ gulp.task('bs', function(){
 gulp.task('scss-with-scss-lint', function(){
   return gulp.src('./src/sass/**/*.scss')
     .pipe(plumber())
-    .pipe(scsslint());
+    .pipe(scsslint())
     .pipe(sass())
     .pipe(gulp.dest('./css/'));
 });
