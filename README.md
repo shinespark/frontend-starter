@@ -17,9 +17,14 @@ $ npm start
 ### gulp *
 
 ```sh
-$ npm gulp *
+$ npm run-script gulp *
 ```
 
-### other gulp scripts
+### other added scripts
+
+```sh
+$ npm run-script *
+```
 
 See "scripts" in the package.json.
+And, see [https://docs.npmjs.com/misc/scripts]
