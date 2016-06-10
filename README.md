@@ -6,6 +6,12 @@
 $ npm install
 ```
 
+## Check npm scripts
+
+```sh
+$ npm run
+```
+
 ## gulp
 
 ### gulp default
