@@ -35,13 +35,9 @@ gulp.task('scss-lint', function(){
 });
 
 
-// SCSS with scss-lint
-gulp.task('sass-with-scss-lint', ['scss-lint', 'sass']);
-
-
 // scss-watch
 gulp.task('scss:watch', function(){
-  var watcher = gulp.watch(SCSS_SRC, ['sass-with-scss-lint']);
+  var watcher = gulp.watch(SCSS_SRC, ['scss-lint', 'sass']);
   watcher.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
   });
