@@ -15,7 +15,8 @@ gulp.task('bs', function(){
   var bsOptions = {};
   bsOptions.files = [HTML_SRC, CSS_SRC];
   // bsOptions.server = './';
-  bsOptions.proxy = 'localhost:3001';
+  // bsOptions.proxy = 'localhost:3000';
+  bsOptions.proxy = '192.168.99.100:3000';
   bsOptions.port  = 3001;
   bs.init(bsOptions);
 });
