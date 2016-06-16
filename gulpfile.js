@@ -14,7 +14,8 @@ var bs = require('browser-sync').create();
 gulp.task('bs', function(){
   var bsOptions = {};
   bsOptions.files = [HTML_SRC, CSS_SRC];
-  // bsOptions.proxy = 'localhost:3000';
+  // bsOptions.server = './';
+  bsOptions.proxy = 'localhost:3001';
   bsOptions.port  = 3001;
   bs.init(bsOptions);
 });
