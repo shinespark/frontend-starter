@@ -1,8 +1,8 @@
 'use strict';
 
-var HTML_SRC = './template/**/*.html';
+var HTML_SRC = './assets/views/**/*.html';
+var SCSS_SRC = './assets/stylesheets/**/*.scss';
 var CSS_SRC  = './css/**/*.css';
-var SCSS_SRC = './src/sass/**/*.scss';
 var CSS_DEST = './css/';
 
 var gulp = require('gulp');
