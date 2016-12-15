@@ -1,14 +1,14 @@
 {
   "name": "frontend-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "## How to install",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.12.12",
+    "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
     "gulp-ruby-haml": "0.0.9",
-    "gulp-sass": "^2.3.1",
+    "gulp-sass": "^3.0.0",
     "gulp-scss-lint": "^0.4.0"
   },
   "scripts": {
