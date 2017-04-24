@@ -1,6 +1,6 @@
 'use strict';
 
-var HAML_SRC  = './assets/views/**/*.haml';
+var HAML_SRC  = './app/views/**/*.haml';
 var HTML_SRC  = './**/*.html';
 var HTML_DEST = './';
 var SCSS_SRC  = './assets/stylesheets/**/*.scss';
